@@ -1,17 +1,18 @@
-function
+ggplot2 function
 ================
 2024-10-27
 
 ``` r
 library(ggplot2)
 
+#' TITLE: generate ggplot2 visualization
 #' Generates a ggplot visualization based on the type of the specified column. 
 #' If the column is numeric, it creates a histogram. If the column is categorical, it creates a bar chart.
 #'
-#' @param data a dataframe containing the column to be plotted. The df must include the specified `column`.
-#' @param column string representing the column name to be plotted. 
-#' @param bins numeric value specifying the number of bins for the histogram; only used if the column is numeric. Default = 30 but the user can specify whatever they like.
-#' @param fill_color string representing the fill color of the plot bars/points. 
+#' @param data a dataframe containing the column to be plotted. The df must include the specified `column`. Named it this to clearly refer to the data that the user is working with.
+#' @param column string representing the column name to be plotted. Named it this to clearly refer to the column they want to visualize
+#' @param bins numeric value specifying the number of bins for the histogram; only used if the column is numeric. Default = 30 but the user can specify whatever they like. Named it this to specifically refer to the number of bins used
+#' @param fill_color string representing the fill color of the plot bars/points.  Named it this to refer to the fill colour the user wants. 
 #' @param ... Additional arguments to pass to the `geom_histogram()` or `geom_bar()` functions
 #' 
 #' @return the ggplot object created based on the column type.
@@ -139,4 +140,4 @@ test_that("create_ggplot function works without errors", {
 })
 ```
 
-    ## Test passed 🎉
+    ## Test passed 😸
